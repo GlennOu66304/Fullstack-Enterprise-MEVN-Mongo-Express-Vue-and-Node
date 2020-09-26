@@ -1,7 +1,9 @@
-const express = require('express')
+import Express from 'express' 
 
-const app = express()
+
+
+const app = Express()
 
 app.listen(3000,()=>{
-    console.log('server started.')
+    console.log('server started succesfully.')
 })
