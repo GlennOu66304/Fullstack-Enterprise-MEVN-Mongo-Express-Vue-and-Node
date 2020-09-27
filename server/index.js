@@ -8,7 +8,9 @@ import path from 'path'
 
 import v1Router from '@routes'
 
-import WebpackConfig from '../webpack.config'
+import webpackConfig from '../webpack.config'
+
+import webpack from 'webpack'
 
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
@@ -24,7 +26,7 @@ app.use(WebpackDevMiddleware(compiler))
 
 app.use(v1Router)
 
-app.get('*', () => {
+app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'))
 })
 

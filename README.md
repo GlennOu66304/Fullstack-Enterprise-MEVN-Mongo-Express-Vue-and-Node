@@ -8,5 +8,11 @@
 config fold needs to be under the server fold;  
 [internal/modules/cjs/loader.js:582 throw err](https://stackoverflow.com/questions/53545800/internal-modules-cjs-loader-js582-throw-err#54964538)  
 
+## 4. TypeError: Router.use() requires middleware function but got a Object and Webpack undefined 
+1. You need to make sure that use the comma in the code below:  
+```
+v1Router.use('api/v1/auth', authRouter)  
+```
+2. all webpack issue in the terminal, you need to make sure that all webpack used the same version of"w" or "W".  
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)
