@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server/index"
+    "dev": "nodemon --exec babel-node server/index",
+    "prettier": "prettier --write './**/*.js'",
+    "build:client": "webpack --mode=production",
+    "build":"npm run build:client && npm run build:server",
+    "build:server": "babel server/ --out-dir dist/ --copy-files"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,7 @@
   },
   "homepage": "https://github.com/GlennOu66304/Fullstack-Enterprise-MEVN-Mongo-Express-Vue-and-Node#readme",
   "dependencies": {
+    "cli": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.7"
@@ -29,6 +34,8 @@
     "@babel/preset-env": "^7.11.5",
     "babel-plugin-module-resolver": "^4.0.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
