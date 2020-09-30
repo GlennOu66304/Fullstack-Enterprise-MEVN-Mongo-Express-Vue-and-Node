@@ -14,5 +14,11 @@ config fold needs to be under the server fold;
 v1Router.use('api/v1/auth', authRouter)  
 ```
 2. all webpack issue in the terminal, you need to make sure that all webpack used the same version of"w" or "W".  
+
+## 5. Issue fixing while you download the repository from the github:  
+1. [nodemon not working: -bash: nodemon: command not found](https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found)  
+2. [https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found](https://github.com/rwieruch/minimal-node-application/issues/new)  
+3. URL to see the content in the browser:http://localhost:3000/  
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)
