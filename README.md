@@ -21,7 +21,7 @@ v1Router.use('api/v1/auth', authRouter)
 3. URL to see the content in the browser:http://localhost:3000/  
 
 ## 6.Adding Vue loader to webpack:
-1.[vue-loader v15 requires VueLoaderPlugin in webpack config #1453](https://github.com/rails/webpacker/issues/1453) 
+1.[vue-loader v15 requires VueLoaderPlugin in webpack config #1453](https://github.com/rails/webpacker/issues/1453)  
 solution:
 ```
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -30,6 +30,12 @@ plugins: [
   new VueLoaderPlugin()
 ]
 ``` 
+## 7.Installing the Tailwind CSS:
+1.[Error: Specified Tailwind config file "...\tailwind.js" doesn't exist. #19](https://github.com/JeffreyWay/laravel-mix-tailwind/issues/19)   
+solution:  
+```
+it will generate a file tailwind.config.js. rename it to tailwind.js and run npm run dev again.
+```
 
 
 ## Resource List:  
