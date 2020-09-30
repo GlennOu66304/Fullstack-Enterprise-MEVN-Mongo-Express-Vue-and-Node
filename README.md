@@ -20,5 +20,17 @@ v1Router.use('api/v1/auth', authRouter)
 2. [https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found](https://github.com/rwieruch/minimal-node-application/issues/new)  
 3. URL to see the content in the browser:http://localhost:3000/  
 
+## 6.Adding Vue loader to webpack:
+1.[vue-loader v15 requires VueLoaderPlugin in webpack config #1453](https://github.com/rails/webpacker/issues/1453) 
+solution:
+```
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+...
+plugins: [
+  new VueLoaderPlugin()
+]
+``` 
+
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)
