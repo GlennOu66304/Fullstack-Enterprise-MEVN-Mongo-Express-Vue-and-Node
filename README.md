@@ -39,12 +39,11 @@ module.exports = {
     plugins: [require('tailwindcss')('./tailwind.config.js')]
 }
 ```
-2. add the default code to the tailwind.config.js
+2.add the default code to the tailwind.config.js
 [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)  
-[3. Rename tailwind.js to tailwind.config.js](https://tailwindcss.com/docs/upgrading-to-v1#3-rename-tailwind-js-to-tailwind-config-js)  
+[Rename tailwind.js to tailwind.config.js](https://tailwindcss.com/docs/upgrading-to-v1#3-rename-tailwind-js-to-tailwind-config-js)  
 
-
-2.[Error: Specified Tailwind config file "...\tailwind.js" doesn't exist. #19](https://github.com/JeffreyWay/laravel-mix-tailwind/issues/19)   
+3.[Error: Specified Tailwind config file "...\tailwind.js" doesn't exist. #19](https://github.com/JeffreyWay/laravel-mix-tailwind/issues/19)   
 solution:  
 ```
 it will generate a file tailwind.config.js. rename it to tailwind.js and run npm run dev again.
@@ -63,9 +62,16 @@ You need to check the lowercase or uppercase of w in the webpack.
 
 ## 11.Design Home screen
 
+1.[Upgrading from v0.x to v1.0](https://tailwindcss.com/docs/upgrading-to-v1#3-rename-tailwind-js-to-tailwind-config-js)    
+2.[Google Fonts](https://fonts.google.com/specimenTab?standard-styles)  
 
+## 12. Design register screen:
+1. You need to click the join now button to see the color UI change.  
+2.
 
 
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  
+3. Reference Code here:[PacktPublishing-Fullstack-Enterprise-MEVN---Mongo--Express--Vue--Node](https://github.com/sanjanapackt/PacktPublishing-Fullstack-Enterprise-MEVN---Mongo--Express--Vue--Node/blob/master/tailwind.js)  
+

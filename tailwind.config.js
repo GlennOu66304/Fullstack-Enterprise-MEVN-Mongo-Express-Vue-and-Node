@@ -221,7 +221,7 @@ margin: {
   '24': '6rem',
   '32': '8rem'
 },
-
+backgroundColor: theme => theme('colors'),
   corePlugins: {},
   plugins: []
 }
