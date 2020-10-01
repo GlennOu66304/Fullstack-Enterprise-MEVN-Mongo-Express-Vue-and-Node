@@ -31,7 +31,20 @@ plugins: [
 ]
 ``` 
 ## 7.Installing the Tailwind CSS:
-1.[Error: Specified Tailwind config file "...\tailwind.js" doesn't exist. #19](https://github.com/JeffreyWay/laravel-mix-tailwind/issues/19)   
+1.change in the latest version of Tailwind:
+a. you need to cchange the plugins in the post.config.js to the code btaild.config.js:  
+```
+module.exports = {
+
+    plugins: [require('tailwindcss')('./tailwind.config.js')]
+}
+```
+2. add the default code to the tailwind.config.js
+[tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)  
+[3. Rename tailwind.js to tailwind.config.js](https://tailwindcss.com/docs/upgrading-to-v1#3-rename-tailwind-js-to-tailwind-config-js)  
+
+
+2.[Error: Specified Tailwind config file "...\tailwind.js" doesn't exist. #19](https://github.com/JeffreyWay/laravel-mix-tailwind/issues/19)   
 solution:  
 ```
 it will generate a file tailwind.config.js. rename it to tailwind.js and run npm run dev again.
@@ -46,6 +59,9 @@ You need to go to the .balerc file and locate the "plugins" code to add the @ to
 
 ## 10.When you meet webpack is not defined error:
 You need to check the lowercase or uppercase of w in the webpack.
+
+
+## 11.Design Home screen
 
 
 
