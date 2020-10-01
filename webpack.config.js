@@ -15,6 +15,7 @@ module.exports = {
      entry: ['webpack-hot-middleware/client?reload=true','./client/index.js'],
      output: {
         filename: 'app.js', 
+        publicPath: '/',
         path: path.resolve(__dirname, 'server/public')
 
      },

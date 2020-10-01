@@ -26,7 +26,8 @@ const compiler = webpack(webpackConfig)
 
 app.use(WebpackDevMiddleware(compiler,{
 
-hot:true
+hot:true,
+publicPath: webpackConfig.output.publicPath
 
 }))
 

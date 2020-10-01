@@ -1,5 +1,5 @@
 <template>
 
-<h1>register</h1>
+<h1>sign up</h1>
 
 </template>

@@ -44,6 +44,11 @@ it will generate a file tailwind.config.js. rename it to tailwind.js and run npm
 
 You need to go to the .balerc file and locate the "plugins" code to add the @ to the pages: @pages.
 
+## 10.When you meet webpack is not defined error:
+You need to check the lowercase or uppercase of w in the webpack.
+
+
+
 
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
