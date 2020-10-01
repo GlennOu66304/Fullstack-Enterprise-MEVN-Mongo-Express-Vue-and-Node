@@ -12,6 +12,8 @@ import webpackConfig from '../webpack.config'
 
 import webpack from 'webpack'
 
+import WebpackHotMiddleware from 'webpack-hot-middleware'
+
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
 
@@ -22,7 +24,15 @@ const app = Express()
 
 const compiler = webpack(webpackConfig)
 
-app.use(WebpackDevMiddleware(compiler))
+app.use(WebpackDevMiddleware(compiler,{
+
+hot:true
+
+}))
+
+
+
+app.use(WebpackHotMiddleware(compiler))
 
 app.use(v1Router)
 

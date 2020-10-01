@@ -37,6 +37,13 @@ solution:
 it will generate a file tailwind.config.js. rename it to tailwind.js and run npm run dev again.
 ```
 
+## 8. file search in visualstudio:
+[How do I search for files in Visual Studio Code?](https://stackoverflow.com/questions/30095376/how-do-i-search-for-files-in-visual-studio-code)  
+
+## 9. the reason why your text could not be link to a file:
+
+You need to go to the .balerc file and locate the "plugins" code to add the @ to the pages: @pages.
+
 
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
