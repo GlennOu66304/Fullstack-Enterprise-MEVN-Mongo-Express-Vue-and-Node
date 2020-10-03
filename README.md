@@ -71,6 +71,23 @@ You need to check the lowercase or uppercase of w in the webpack.
 ## 11.Custom input compoent:
 [VueJs dev tools panel not showing](https://stackoverflow.com/questions/41505150/vuejs-dev-tools-panel-not-showing#:~:text=Try%20the%20following%3A,look%20for%20the%20Vue%20tab)
 
+## 12.Validating forms with vee validate:
+
+1. To avoid the error with the version 3 vee-validate, you need to manually uninstall the installed vee-validate package, then install the 2.2.0 version of the  vee-validate.  
+[npm-uninstall](https://docs.npmjs.com/cli/uninstall)  
+[Vee-validate 2.2.0](https://www.npmjs.com/package/vee-validate/v/2.2.0)  
+[Find the version of an installed npm package](https://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)  
+[NPM List installed Package](https://docs.npmjs.com/cli/ls.html)  
+[Validation in vue js using vee-validate having error](https://stackoverflow.com/questions/57674453/validation-in-vue-js-using-vee-validate-having-error)  
+[Error: "export 'default' (imported as 'VeeValidate') was not found in 'vee-validate' #2234](https://github.com/logaretm/vee-validate/issues/2234)  
+[VeeValidate documentation](https://logaretm.github.io/vee-validate/guide/rules.html#importing-the-rules)  
+
+
+2.You need to correct the "error" to "errors" to see ereas the bug in the console in the Register.vue file:  
+```
+ :error="errors.first('password')"
+```
+3.You need to click the Sign up button to see the red sentence,  
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  

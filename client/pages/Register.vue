@@ -16,9 +16,15 @@
 
            <text-input
 
+           name="name"
+
            :value:="model.name"
 
            v-model="model.name"
+
+           v-validate="'required'"
+
+            :error="errors.first('name')"
            
            placeholder="Enter Your names"
            
@@ -26,10 +32,15 @@
 
 
            <text-input
+        
+           name="email"
 
            :value:="model.email"
 
            v-model="model.email"
+
+           v-validate="'required|email'"
+            :error="errors.first('email')"
            
            placeholder="Enter Your email"
            
@@ -40,17 +51,24 @@
 
            type="password"
 
+           name="password"
+
+
            :value:="model.password"
 
            v-model="model.password"
            
+          v-validate="'required|min:6'"
+
+           :error="errors.first('password')"
+
            placeholder="Enter Your password"
            />
 
        
             
 
-            <button class="w-full mt-3 text-sm py-3 bg-emerald text-white rounded-sm focus:outline-none hover:bg-emerald-lighte">
+            <button @click="register" class="w-full mt-3 text-sm py-3 bg-emerald text-white rounded-sm focus:outline-none hover:bg-emerald-lighte">
 
                 Sign Up
 
@@ -79,7 +97,26 @@ export default {
 
         }
 
-    })
+    }),
+
+    methods:{
+
+        register(){
+        
+        this.$validator.validate().then(isValid => {
+
+         if(! isValid) {
+
+             return
+         }
+
+
+
+        })
+
+
+        }
+    }
 
 
 }

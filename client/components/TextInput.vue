@@ -1,18 +1,32 @@
 <template>
+
+<div class="mb-3">
     
      <input 
 
      type="text" 
+    
+     :name="name"
 
      :value="value"
 
+     @focus="$emit('focus')"
+
+     @blur="$emit('blue')"
+
      :placeholder="placeholder"
+
+     @change="$emit('input', $event.target.value)"
 
      @input="$emit('input', $event.target.value)"
 
-     class="w-full text-xs focus:outline-none bg-brown-lightest p-3 text-brown mb-3" 
+     class="w-full text-xs focus:outline-none bg-brown-lightest p-3 text-brown" 
 
      >
+
+     <span v-if="error" class="text-xs text-red">{{error}}</span>
+
+</div>
 
 </template>
 
@@ -44,7 +58,24 @@ export default {
             type:String,
             required: false,
             default: ''
+        },
+        
+        name :{
+
+            type: String,
+
+            required: true
+        },
+
+        error: {
+
+
+            type: String,
+
+            required: false
         }
+
+
 
     }
 }
