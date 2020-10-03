@@ -60,15 +60,16 @@ You need to go to the .balerc file and locate the "plugins" code to add the @ to
 You need to check the lowercase or uppercase of w in the webpack.
 
 
-## 11.Design Home screen
+## 11.Design home screen:
 
 1.[Upgrading from v0.x to v1.0](https://tailwindcss.com/docs/upgrading-to-v1#3-rename-tailwind-js-to-tailwind-config-js)    
 2.[Google Fonts](https://fonts.google.com/specimenTab?standard-styles)  
 
 ## 12. Design register screen:
 1. You need to click the join now button to see the color UI change.  
-2.
 
+## 11.Custom input compoent:
+[VueJs dev tools panel not showing](https://stackoverflow.com/questions/41505150/vuejs-dev-tools-panel-not-showing#:~:text=Try%20the%20following%3A,look%20for%20the%20Vue%20tab)
 
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
