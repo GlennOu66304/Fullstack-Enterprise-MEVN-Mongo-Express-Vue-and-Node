@@ -17,7 +17,10 @@ v1Router.use('api/v1/auth', authRouter)
 
 ## 5. Issue fixing while you download the repository from the github:  
 1. [nodemon not working: -bash: nodemon: command not found](https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found)  
-2. [https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found](https://github.com/rwieruch/minimal-node-application/issues/new)  
+2. [failed to start process, "babel-node" exec not found #2](https://github.com/rwieruch/minimal-node-application/issues/2)  
+```
+npm install --save-dev @babel/node
+```
 3. URL to see the content in the browser:http://localhost:3000/  
 
 ## 6.Adding Vue loader to webpack:
