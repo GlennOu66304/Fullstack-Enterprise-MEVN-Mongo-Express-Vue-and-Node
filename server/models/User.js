@@ -1,5 +1,10 @@
 import mongoose from 'mongoose'
 
+
+import Bcrypt from 'bcryptjs'
+
+import randomstring from 'randomstring'
+
 const UserSchema = new mongoose.Schema({
 
     name: String,
@@ -15,6 +20,18 @@ const UserSchema = new mongoose.Schema({
     emailConfirmedAt: Date,
 
     emailConfirmCode: String
+
+})
+
+
+UserSchema.pre('save', function(){
+
+this.password = Bcrypt.hashSync(this.password)
+
+this.emailConfirmCode = randomstring.generate(72)
+
+
+this.createdAt = new Date()
 
 })
 
