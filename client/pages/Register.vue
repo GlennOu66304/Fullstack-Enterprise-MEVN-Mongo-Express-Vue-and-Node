@@ -83,6 +83,10 @@
 </template>
 
 <script>
+
+import { POST_REGISTER  } from '@store/auth/actions'
+
+
 export default {
     
     data: () => ({
@@ -109,6 +113,9 @@ export default {
 
              return
          }
+
+         
+         this.$store.dispatch(POST_REGISTER, this.model)
 
 
 

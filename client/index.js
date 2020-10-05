@@ -12,6 +12,9 @@ import Main from './pages/Main.vue'
 
 import Validator from 'vee-validate'
 
+
+import store from './store'
+
 import TextInput from '@/client/components/TextInput.vue'
 
 Vue.use(Router)
@@ -25,6 +28,8 @@ const app = new Vue({
     el:'#app',
 
     router,
+
+    store,
 
     render: h => h(Main)
 })

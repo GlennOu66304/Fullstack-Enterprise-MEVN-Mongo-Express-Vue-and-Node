@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/GlennOu66304/Fullstack-Enterprise-MEVN-Mongo-Express-Vue-and-Node#readme",
   "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "cli": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -29,6 +31,7 @@
     "vee-validate": "^2.2.0",
     "vue": "^2.6.12",
     "vue-router": "^3.4.5",
+    "vuex": "^3.5.1",
     "webpack-dev-middleware": "^3.7.2"
   },
   "devDependencies": {

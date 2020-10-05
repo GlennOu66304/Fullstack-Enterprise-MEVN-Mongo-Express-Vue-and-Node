@@ -6,12 +6,20 @@
     "plugins": [
      ["module-resolver", {
          "root": ["./"],
+
          "alias": {
              "@":"./",
+
+             "@client": "./client",
+
+             "@store": "./client/store",
 
              "@components":"./client/components",
 
              "@pages":"./client/pages",
+            
+             "@models":"./server/models",
+
 
              "@config": "./server/config",
 

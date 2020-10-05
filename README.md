@@ -21,7 +21,13 @@ v1Router.use('api/v1/auth', authRouter)
 ```
 npm install --save-dev @babel/node
 ```
-3. URL to see the content in the browser:http://localhost:3000/  
+3. The error: you cold not see " API make a reqeset to express server"  
+You need to build a dist firsr to avoide this error:  
+```
+npm run build
+```
+[A Beginner’s Guide to Webpack](https://www.sitepoint.com/webpack-beginner-guide/)  
+4. URL to see the content in the browser:http://localhost:3000/  
 
 ## 6.Adding Vue loader to webpack:
 1.[vue-loader v15 requires VueLoaderPlugin in webpack config #1453](https://github.com/rails/webpacker/issues/1453)  
