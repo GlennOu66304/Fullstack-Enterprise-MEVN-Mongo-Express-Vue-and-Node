@@ -98,7 +98,7 @@ You need to check the lowercase or uppercase of w in the webpack.
 ```
 3.You need to click the Sign up button to see the red sentence,  
 
-## 13.Mer branch and delete a branch
+## 13.Merge branch and delete a branch
 1.[What is the best (and safest) way to merge a Git branch into master?](https://stackoverflow.com/questions/5601931/what-is-the-best-and-safest-way-to-merge-a-git-branch-into-master)  
 2.[How to Delete a Git Branch Both Locally and Remotely](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)  
 
