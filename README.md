@@ -97,6 +97,11 @@ You need to check the lowercase or uppercase of w in the webpack.
  :error="errors.first('password')"
 ```
 3.You need to click the Sign up button to see the red sentence,  
+
+## 13.Mer branch and delete a branch
+1.[What is the best (and safest) way to merge a Git branch into master?](https://stackoverflow.com/questions/5601931/what-is-the-best-and-safest-way-to-merge-a-git-branch-into-master)  
+2.[How to Delete a Git Branch Both Locally and Remotely](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)  
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  
