@@ -102,6 +102,23 @@ You need to check the lowercase or uppercase of w in the webpack.
 1.[What is the best (and safest) way to merge a Git branch into master?](https://stackoverflow.com/questions/5601931/what-is-the-best-and-safest-way-to-merge-a-git-branch-into-master)  
 2.[How to Delete a Git Branch Both Locally and Remotely](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)  
 
+
+## 14. Sending email confirmation mails:
+
+1.if your email sending status is pending, just creat a new emai, then change the email password and user name in the .env file.  
+
+2. Mailtrap:[Please confirm your account](https://mailtrap.io/inboxes/1080568/messages/1888814299)  
+
+## 15.If you meet the HTML resource could not come out, 
+
+1.you need to clear the npm run dev history before,   
+2.then have: npm run dev again.   
+3.at this time, you need to refresh the localhost:3000 again.  
+4.and go to the register,  
+5.to clean the previous Network (chrome developer)hsitory.   
+6.then fill the new username, email address, passwords and click the Sign up.   
+7.to wait for the loading finish,   
+8.then refresh the mailtrap to see the html content.  
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  

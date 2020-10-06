@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/GlennOu66304/Fullstack-Enterprise-MEVN-Mongo-Express-Vue-and-Node#readme",
   "dependencies": {
+    "@fullstackjs/mail": "^1.0.7",
     "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
