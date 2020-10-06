@@ -13,6 +13,10 @@ import Main from './pages/Main.vue'
 import Validator from 'vee-validate'
 
 
+import Button from '@components/Button.vue'
+
+import Loader from '@components/Loader.vue'
+
 import store from './store'
 
 import TextInput from '@/client/components/TextInput.vue'
@@ -20,6 +24,11 @@ import TextInput from '@/client/components/TextInput.vue'
 Vue.use(Router)
 
 Vue.use(Validator)
+
+
+Vue.component('btn', Button)
+
+Vue.component('loader', Loader)
 
 Vue.component('text-input', TextInput)
 
