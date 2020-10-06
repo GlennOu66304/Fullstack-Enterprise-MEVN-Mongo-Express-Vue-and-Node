@@ -116,10 +116,6 @@ You need to check the lowercase or uppercase of w in the webpack.
 If you could not see the image loading, you need to save the file withought running the 'npm run dev', then all files are saved once. You could "npm run dev"
 once to test the performance. You need to run " npm run dev" after all the dot next to the file name dissaper.  
 
-## 17.Json Webtoken:
-
-Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect.
-
 1.you need to clear the npm run dev history before,   
 2.then have: npm run dev again.   
 3.at this time, you need to refresh the localhost:3000 again.  
@@ -127,7 +123,12 @@ Inorder to hiden the passwords, you need to change the :type="type" in the TextI
 5.to clean the previous Network (chrome developer)hsitory.   
 6.then fill the new username, email address, passwords and click the Sign up.   
 7.to wait for the loading finish,   
-8.then refresh the mailtrap to see the html content.  
+8.then refresh the mailtrap to see the html content. 
+
+Short change in a file, you do not need to go throught the process the above.
+
+## 17.Json Webtoken:  
+Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect.  
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  
