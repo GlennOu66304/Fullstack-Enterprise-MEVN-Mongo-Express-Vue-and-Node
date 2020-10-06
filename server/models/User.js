@@ -5,6 +5,8 @@ import Bcrypt from 'bcryptjs'
 
 import mongoose from 'mongoose'
 
+import jwt from 'jsonwebtoken'
+
 
 import Mail from '@fullstackjs/mail'
 
@@ -64,5 +66,12 @@ url:`${config.url}/auth/emails/confirm/${this.emailConfirmCode}`
 .send()
 
 })
+
+UserSchema.methods.generateToken = function () {
+
+return jwt.sign( {id: this.id }, config.jwtSecret )
+
+
+}
 
 export default mongoose.model('User', UserSchema)

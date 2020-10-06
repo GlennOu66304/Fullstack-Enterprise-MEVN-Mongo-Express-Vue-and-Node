@@ -114,7 +114,11 @@ You need to check the lowercase or uppercase of w in the webpack.
 ## 16. Button Loading State:
 
 If you could not see the image loading, you need to save the file withought running the 'npm run dev', then all files are saved once. You could "npm run dev"
-once to test the performance. You need to run " npm run dev" after all the dot next to the file name dissaper.
+once to test the performance. You need to run " npm run dev" after all the dot next to the file name dissaper.  
+
+## 17.Json Webtoken:
+
+Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect.
 
 1.you need to clear the npm run dev history before,   
 2.then have: npm run dev again.   

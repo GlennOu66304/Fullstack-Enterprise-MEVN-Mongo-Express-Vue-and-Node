@@ -4,7 +4,7 @@
     
      <input 
 
-     type="text" 
+     :type="type" 
     
      :name="name"
 
