@@ -128,7 +128,11 @@ once to test the performance. You need to run " npm run dev" after all the dot n
 Short change in a file, you do not need to go throught the process the above.
 
 ## 17.Json Webtoken:  
-Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect.  
+Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect. 
+
+## 18.Persisting authentication
+1. If you want to debug the code and try to figure out the code changes in the file, you could go to the fork symbol, and select the file to locate the change part code and compare it with the original code in the video.  
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  
