@@ -127,7 +127,7 @@ once to test the performance. You need to run " npm run dev" after all the dot n
 
 Short change in a file, you do not need to go throught the process the above.
 
-## 17.Json Webtoken:  
+## 17.JSON Webtoken:  
 Inorder to hiden the passwords, you need to change the :type="type" in the TextInput to achieve this effect. 
 
 ## 18.Persisting authentication
