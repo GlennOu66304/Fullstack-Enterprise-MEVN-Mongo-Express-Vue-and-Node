@@ -146,7 +146,11 @@ const { name, email, password} = req.body
 ```
 the problem could be caused by the Tabnine, so you need to unstalll it in the extensition tab, then reload the Visual studio.  
 3. If you see the email address becomes white in the field in the form, then you need to type the email in the typing bar manually.  
-not select the email from the sugggesting email.   
+not select the email from the sugggesting email. 
+
+## 20. User Login server side
+
+If you could not see the changes in the fork side, you need to run: npm run dev to trigger the change, then commit it and push it to the github.
 
 
 ## Resource List:  
