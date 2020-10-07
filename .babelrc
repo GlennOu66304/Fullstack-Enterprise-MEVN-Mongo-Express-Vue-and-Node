@@ -12,6 +12,10 @@
 
              "@client": "./client",
 
+             "@server":"./server",
+
+            
+
              "@store": "./client/store",
 
              "@components":"./client/components",
@@ -24,6 +28,8 @@
              "@config": "./server/config",
 
              "@routes": "./server/routes",
+
+             "@validators": "./server/validators",
 
              "@controllers":"./server/controllers"
          }

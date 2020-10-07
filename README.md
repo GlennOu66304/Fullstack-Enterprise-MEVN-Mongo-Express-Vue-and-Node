@@ -133,6 +133,22 @@ Inorder to hiden the passwords, you need to change the :type="type" in the TextI
 ## 18.Persisting authentication
 1. If you want to debug the code and try to figure out the code changes in the file, you could go to the fork symbol, and select the file to locate the change part code and compare it with the original code in the video.  
 
+## 19.Fullstack Validation:
+
+1.If you meet the error"Error: Cannot find module '@validators/register'', you need to go to the .babelrc file
+to check if you add @ to the module before, like:  
+```
+"@validators": "./server/validators",
+```
+2. If you meet the" 522 code error" in the Network, you need to remove the parser in the register.js file:
+```
+const { name, email, password} = req.body
+```
+the problem could be caused by the Tabnine, so you need to unstalll it in the extensition tab, then reload the Visual studio.  
+3. If you see the email address becomes white in the field in the form, then you need to type the email in the typing bar manually.  
+not select the email from the sugggesting email.   
+
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  
