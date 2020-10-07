@@ -8,64 +8,51 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const MiniExtractCssPlugin = require('mini-css-extract-plugin')
 
-
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
 
-     entry: ['webpack-hot-middleware/client?reload=true','./client/index.js'],
-     output: {
-        filename: 'app.js', 
+    entry: ['webpack-hot-middleware/client?reload=true', './client/index.js'],
+    output: {
+        filename: 'app.js',
         publicPath: '/',
-        path: path.resolve(__dirname, 'server/public')
+        path: path.resolve(__dirname, 'server/public'),
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
 
-     },
-     module:{
-          rules: [
-              {
-                 test: /\.js$/,
-
-                 use: {
-                    loader:'babel-loader'
-                 }
-
-              },
-
-              {
-
-               test: /\.vue$/,
-
-               use:{
-                  loader:'vue-loader'
-               }
-
+                use: {
+                    loader: 'babel-loader',
+                },
             },
 
             {
+                test: /\.vue$/,
 
-               test: /\.css$/,
+                use: {
+                    loader: 'vue-loader',
+                },
+            },
 
-               use:[
-                  MiniExtractCssPlugin.loader,
+            {
+                test: /\.css$/,
 
-                  'css-loader',
-                  'postcss-loader'
+                use: [
+                    MiniExtractCssPlugin.loader,
 
+                    'css-loader',
+                    'postcss-loader',
+                ],
+            },
+        ],
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
 
-               ]
-
-            }
-
-          ]
-
-     
-
-},
-     plugins:[
-      new webpack.HotModuleReplacementPlugin(),
-
-      new VueLoaderPlugin(),
-      new MiniExtractCssPlugin({
-         filename: 'app.css'
-      })
-     ]
+        new VueLoaderPlugin(),
+        new MiniExtractCssPlugin({
+            filename: 'app.css',
+        }),
+    ],
 }

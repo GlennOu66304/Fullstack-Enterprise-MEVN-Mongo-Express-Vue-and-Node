@@ -18,8 +18,6 @@ import WebpackHotMiddleware from 'webpack-hot-middleware'
 
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
-
-
 Mongoose.connect(config.databaseUrl, { useNewUrlParser: true })
 
 const app = Express()
@@ -28,14 +26,12 @@ app.use(BodyParser.json())
 
 const compiler = webpack(webpackConfig)
 
-app.use(WebpackDevMiddleware(compiler,{
-
-hot:true,
-publicPath: webpackConfig.output.publicPath
-
-}))
-
-
+app.use(
+    WebpackDevMiddleware(compiler, {
+        hot: true,
+        publicPath: webpackConfig.output.publicPath,
+    })
+)
 
 app.use(WebpackHotMiddleware(compiler))
 

@@ -2,20 +2,15 @@ import config from '@config'
 
 import Bcrypt from 'bcryptjs'
 
-
 import mongoose from 'mongoose'
 
 import jwt from 'jsonwebtoken'
-
 
 import Mail from '@fullstackjs/mail'
 
 import randomstring from 'randomstring'
 
-
-
 const UserSchema = new mongoose.Schema({
-
     name: String,
 
     email: String,
@@ -28,50 +23,39 @@ const UserSchema = new mongoose.Schema({
 
     emailConfirmedAt: Date,
 
-    emailConfirmCode: String
-
+    emailConfirmCode: String,
 })
 
+UserSchema.pre('save', function () {
+    this.password = Bcrypt.hashSync(this.password)
 
-UserSchema.pre('save', function(){
+    this.emailConfirmCode = randomstring.generate(72)
 
-this.password = Bcrypt.hashSync(this.password)
-
-this.emailConfirmCode = randomstring.generate(72)
-
-
-this.createdAt = new Date()
-
+    this.createdAt = new Date()
 })
 
+UserSchema.post('save', async function () {
+    await new Mail('confirm-account')
 
-UserSchema.post('save', async function(){
+        .to(this.email, this.name)
 
+        .subject('Please confirm your account')
 
-await new Mail('confirm-account')
+        .data({
+            name: this.name,
 
-.to(this.email, this.name)
+            url: `${config.url}/auth/emails/confirm/${this.emailConfirmCode}`,
+        })
 
-.subject('Please confirm your account')
-
-.data({
-
-name: this.name,
-
-url:`${config.url}/auth/emails/confirm/${this.emailConfirmCode}`
-
-
-})
-
-.send()
-
+        .send()
 })
 
 UserSchema.methods.generateToken = function () {
+    return jwt.sign({ id: this.id }, config.jwtSecret)
+}
 
-return jwt.sign( {id: this.id }, config.jwtSecret )
-
-
+UserSchema.methods.comparePasswords = function (plainPasword) {
+    return Bcrypt.compareSync(plainPasword, this.password)
 }
 
 export default mongoose.model('User', UserSchema)
