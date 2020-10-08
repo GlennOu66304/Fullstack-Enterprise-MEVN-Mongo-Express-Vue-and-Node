@@ -1,4 +1,4 @@
-import { SET_AUTH } from './actions'
+import { SET_AUTH, UNSET_AUTH } from './actions'
 
 export default {
     [SET_AUTH](state, { user, token }) {
@@ -6,4 +6,14 @@ export default {
 
         state.token = token
     },
+
+    [UNSET_AUTH](state) {
+
+    state.user = null
+
+    state.token = null
+
+
+
+    }
 }

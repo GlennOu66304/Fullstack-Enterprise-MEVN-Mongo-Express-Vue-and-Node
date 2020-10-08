@@ -156,7 +156,10 @@ If you could not see the changes in the fork side, you need to run: npm run dev 
 
 once all the files are saved and run "npm run dev" Compiled successfully, you do'nt need to refresh it in the browser again, you could just try the code effect. if problem exists, you could just repeat refresh the page again to try the code effect.
 
+## 22. Auth Mixin:
 
+You need cmd + save to save the code when you finish the few lines code, and check the effect if fit the video. So when the bug 
+comes out, you could rewatch that part of video to check your typing with code in the video is same and fixt it.
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  

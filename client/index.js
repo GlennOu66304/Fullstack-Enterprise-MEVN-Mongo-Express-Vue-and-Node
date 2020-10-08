@@ -16,11 +16,15 @@ import Loader from '@components/Loader.vue'
 
 import store from './store'
 
+import authMixin from '@client/mixins/auth'
+
 import TextInput from '@/client/components/TextInput.vue'
 
 Vue.use(Router)
 
 Vue.use(Validator)
+
+Vue.mixin(authMixin)
 
 Vue.component('btn', Button)
 
