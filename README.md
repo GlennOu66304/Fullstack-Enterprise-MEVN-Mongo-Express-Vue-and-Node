@@ -160,6 +160,22 @@ once all the files are saved and run "npm run dev" Compiled successfully, you do
 
 You need cmd + save to save the code when you finish the few lines code, and check the effect if fit the video. So when the bug 
 comes out, you could rewatch that part of video to check your typing with code in the video is same and fixt it.
+
+## 23. Sending password reset Links
+
+1.You need to wait for the whole files code in the video finish, then start to type the code in the editor to verify it.  
+Make sure that you think the logical of the code both in the video adn typing in the editor.  From the line by line copy code to use the logic to guide your code typing.  
+
+2.If you still could not see the Html content in the mailtrap, you need to rerun the "npm run dev" and refresh the Locallhost page 
+three time to clear the previous history.   
+
+3. if you could not see the token, make sure that you use the bracket {} instead of the ()  
+
+```
+url: `${config.url}/auth/passwords/reset/${token}`,
+
+```
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  

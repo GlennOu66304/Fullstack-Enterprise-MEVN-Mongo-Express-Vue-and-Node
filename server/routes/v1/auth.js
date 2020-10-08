@@ -12,4 +12,6 @@ authRouter.post('/login', loginValidator, authController.login)
 
 authRouter.post('/register', registerValidator, authController.register)
 
+authRouter.post('/passwords/email',  authController.forgotPassword)
+
 export default authRouter
