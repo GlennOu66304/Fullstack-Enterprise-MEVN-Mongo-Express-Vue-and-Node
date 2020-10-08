@@ -6,19 +6,19 @@ const login = async (req, res) => {
     const user = await User.findOne({ email })
 
     if (user) {
-        if (user.comoarePasswords(password)) {
+        if (user.comparePasswords(password)) {
             const token = user.generateToken()
 
             return res.json({
                 user,
 
-                token,
+                token
             })
         }
     }
 
     return res.status(400).json({
-        email: 'These credentials do not match our records.',
+        email: 'These credentials do not match our records.'
     })
 }
 
