@@ -152,6 +152,10 @@ not select the email from the sugggesting email.
 
 If you could not see the changes in the fork side, you need to run: npm run dev to trigger the change, then commit it and push it to the github.
 
+## 21. Form mixin:
+
+once all the files are saved and run "npm run dev" Compiled successfully, you do'nt need to refresh it in the browser again, you could just try the code effect. if problem exists, you could just repeat refresh the page again to try the code effect.
+
 
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
