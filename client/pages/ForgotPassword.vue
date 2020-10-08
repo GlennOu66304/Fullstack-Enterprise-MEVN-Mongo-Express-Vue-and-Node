@@ -5,7 +5,7 @@
 <div class="container my-16 w-full  mx-auto">
     
     <div class="max-w-xs mx-auto ">
-        <h2 class="text-center text-lg text-gold"> Login </h2>
+        <h2 class="text-center text-lg text-gold"> Forgot Password </h2>
 
         <div class="w-full bg-white shadow mt-5 rounded-sm  p-8">
 
@@ -25,42 +25,17 @@
            />
 
 
-           <text-input
-
-           type="password"
-
-           name="password"
-
-
-           :value:="model.password"
-
-           v-model="model.password"
-           
-          v-validate="'required|min:6'"
-
-           :error="errors.first('password')"
-
-           placeholder="Enter Your password"
-           />
-
-         <div class="my-8 flex justify-center items-center" > 
-
-          <router-link to="/auth/passwords/email" class="no-underline text-brown"> Forgot Password?</router-link>
-
-
-
-         </div>
         
 
        <btn 
 
-       label="Sign in"
+       label="Send Password Reset Link"
 
        :disabled="loading"
 
        :loading="loading"
 
-       @click="login"
+       @click="forgotPassword"
 
        />
             
@@ -76,7 +51,7 @@
 
 import formMixin from '@client/mixins/form'
 
-import { POST_LOGIN } from '@store/auth/actions'
+import { POST_FORGOT_PASSWORD} from '@store/auth/actions'
 
 
 export default {
@@ -89,9 +64,8 @@ export default {
 
         model: {
 
-           email:'',
+           email:''
 
-           password:''
 
         }
 
@@ -99,7 +73,7 @@ export default {
 
     methods:{
 
-        login(){
+        forgotPassword(){
         
         this.$validator.validate().then(isValid => {
 
@@ -112,7 +86,7 @@ export default {
 
 
          
-         this.$store.dispatch(POST_LOGIN, this.model)
+         this.$store.dispatch(POST_FORGOT_PASSWORD, this.model)
 
 
          .then(response => {
@@ -121,7 +95,7 @@ export default {
          this.toggleLoading()
 
 
-        this.setAuth(response.data)
+       this.$router.push('/')
 
 
          })
