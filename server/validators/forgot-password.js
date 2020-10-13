@@ -2,7 +2,7 @@ import * as Yup from 'yup'
 
 import User from '@models/User'
 
-import PasswordDReset from '@models/PasswordReset'
+import PasswordReset from '@models/PasswordReset'
 
 const ForgotPasswordSchema = Yup.object().shape({
     email: Yup.string().email().required(),
@@ -33,7 +33,7 @@ const { email} = req.body
     }
 
 
-    const existingReset = await PasswordDReset.findOne({email})
+    const existingReset = await PasswordReset.findOne({email})
 
 
     if (existingReset) {
