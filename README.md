@@ -176,6 +176,26 @@ url: `${config.url}/auth/passwords/reset/${token}`,
 
 ```
 
+## 24.Bug fixing for the reset password Link could not see in the mailtrap 
+1. open a new terminal and type the code below to fix the Mongodb bug:MongoDB connection error: MongoError: failed to connect to server [localhost:27017]  
+
+````
+brew services start mongodb-community@4.4
+
+mongo
+````
+[Install MongoDB Community Edition on macOS](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)  
+
+[MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]](https://stackoverflow.com/questions/50173080/mongonetworkerror-failed-to-connect-to-server-localhost27017-on-first-connec)  
+
+
+2. Mongoose Warning message fixing:  
+You need to add the code"{useUnifiedTopology: true, useNewUrlParser: true })" into the index.js to fix the error.
+```
+Mongoose.connect('mongodb://localhost:27017/mevn2mongo',{useUnifiedTopology: true, useNewUrlParser: true })
+```
+
+
 ## Resource List:  
 1.Project Resource List:[Fullstack Enterprise MEVN: Mongo, Express, Vue, and Node](https://learning.oreilly.com/videos/fullstack-enterprise-mevn/9781800202276/9781800202276-video2_1)  
 2. Visul studio file icon extensition:[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)  

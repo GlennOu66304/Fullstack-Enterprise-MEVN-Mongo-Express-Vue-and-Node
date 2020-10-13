@@ -18,7 +18,7 @@ import WebpackHotMiddleware from 'webpack-hot-middleware'
 
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
-Mongoose.connect(config.databaseUrl, { useNewUrlParser: true })
+Mongoose.connect(config.databaseUrl, {useUnifiedTopology: true, useNewUrlParser: true })
 
 const app = Express()
 
