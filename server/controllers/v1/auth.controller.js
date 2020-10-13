@@ -3,6 +3,8 @@ import User from '@models/User'
 const login = async (req, res) => {
     const { email, password } = req.body
 
+
+
     const user = await User.findOne({ email })
 
     if (user) {
@@ -41,11 +43,7 @@ const register = async (req, res) => {
 
 const forgotPassword = async (req, res) => {
 
-const { email } = req.body
-
-const user = await User.findOne({  email })
-
-await user.forgotPassword()
+await req.user.forgotPassword()
 
 return res.json({
 
